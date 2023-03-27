@@ -59,7 +59,7 @@ if selected_option == "EDA":
            
         st.image(uploaded_file, caption='Imagen', width=400)
         reques_dat = {'transform': transform, 'classifier': classifier}
-        url = "http://127.0.0.1:5000/upload"
+        url = "https://projet-ia2-server.herokuapp.com/upload"
         files = {"archivo": uploaded_file.getvalue()}
         response = requests.post(url, files=files,data=reques_dat)
         datos = response.json()
